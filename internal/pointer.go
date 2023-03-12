@@ -8,6 +8,10 @@ type Address struct {
 	Country  string
 }
 
+func ChangeCityToJakarta(address *Address) {
+	address.City = "Jakarta"
+}
+
 func Pointer() {
 	address1 := Address{"Bekasi", "Jawa Barat", "Indonesia"}
 	address2 := &address1
