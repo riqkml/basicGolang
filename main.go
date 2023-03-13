@@ -6,10 +6,16 @@ import (
 )
 
 func main() {
+	//pointer
 	internal.Pointer()
 	home := internal.Address{}
 
+	// pointer function
 	internal.ChangeCityToJakarta(&home)
 
-	log.Println("city ", home.City)
+	// pointer method
+	riqki := internal.Man{Name: "Riqki"}
+	riqki.GetMarried()
+
+	log.Println("city ", riqki.Name)
 }
