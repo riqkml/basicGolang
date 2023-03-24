@@ -3,6 +3,7 @@ package main
 import (
 	"examplego/internal"
 	"log"
+	"os"
 )
 
 func main() {
@@ -17,5 +18,17 @@ func main() {
 	riqki := internal.Man{Name: "Riqki"}
 	riqki.GetMarried()
 
-	log.Println("city ", riqki.Name)
+	// package init
+	con := internal.GetDatabase()
+
+	// package OS
+	_ = os.Args
+	name, _ := os.Hostname()
+
+	log.Println("db con = ", con)
+
+	id := os.Getenv("IDAPP")
+	log.Println(name, id)
+
+	internal.GenerateList()
 }
