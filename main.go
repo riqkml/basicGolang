@@ -2,6 +2,7 @@ package main
 
 import (
 	"examplego/internal"
+	"fmt"
 	"log"
 	"os"
 )
@@ -31,4 +32,7 @@ func main() {
 	log.Println(name, id)
 
 	internal.GenerateList()
+
+	sample := internal.Sample{Name: "Riqki", Age: 23}
+	fmt.Println("sample ", sample.IsValid())
 }
